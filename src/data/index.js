@@ -1,6 +1,6 @@
 // array dati
-// link navbar
 
+// link navbar
 const navLinks = [
   {
     text: "home",
@@ -23,7 +23,7 @@ const navLinks = [
   {
     text: "courses",
     url: "#",
-    isNew: false,
+    isNew: true,
     isButton: false,
   },
   {
@@ -94,16 +94,6 @@ const testimonials = [
   },
 ];
 
-// contatti footer
-const contactDetails = [
-  {
-    address: "12345 North Main Street, New York, NY 555555",
-    phone: "1.800.555.6789",
-    mail: "info@your-domain.com",
-    link: "Theme-Fusion.com",
-  },
-];
-
 // corsi footer
 const courses = [
   "Pass Plus",
@@ -112,4 +102,4 @@ const courses = [
   "Instructor Training",
 ];
 
-export { navLinks, instructors, testimonials, contactDetails, courses };
+export { navLinks, instructors, testimonials, courses };
