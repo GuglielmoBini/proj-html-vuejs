@@ -12,7 +12,10 @@ export default {
             <div class="container h-100">
                 <div class="d-flex align-items-center justify-content-between h-100">
                     <div>We have a 95% Successful Pass Rate!</div>
-                    <div>Give us a call to book your tuition! 1-800-555-555</div>
+                    <div>
+                        <span class="m-2"><i class="fa-solid fa-phone"></i></span>
+                        <span>Give us a call to book your tuition! 1-800-555-555</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,14 +30,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/mixins' as *;
 @use '../assets/scss/partials/variables' as *;
 
 header {
     height: 750px;
     background-image: url(../assets/img/homepage-hero-background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-image;
 
     .banner {
         height: 40px;
