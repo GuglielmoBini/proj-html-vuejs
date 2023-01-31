@@ -11,6 +11,10 @@ a {
   font-weight: bold;
   padding: 10px 20px;
   color: $white;
+
+  &:hover {
+    color: $green;
+  }
 }
 
 .green-button {
