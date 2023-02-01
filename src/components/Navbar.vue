@@ -1,12 +1,12 @@
 <script>
 import { navLinks } from '../data';
-import GreenButton from './GreenButton.vue';
+import ColoredButton from './ColoredButton.vue';
 export default {
     name: "Navbar",
     data() {
         return { navLinks }
     },
-    components: { GreenButton }
+    components: { ColoredButton }
 }
 </script>
 
@@ -27,7 +27,7 @@ export default {
                             <span v-if="link.isNew" class="new-label">NEW</span>
                         </a>
                     </li>
-                    <li><green-button label="book now"></green-button></li>
+                    <li><colored-button label="book now" class="green-button"></colored-button></li>
                 </ul>
             </div>
         </div>

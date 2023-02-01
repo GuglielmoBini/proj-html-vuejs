@@ -1,12 +1,12 @@
 <script>
 import { courses } from '../data';
-import GreenButton from './GreenButton.vue';
+import ColoredButton from './ColoredButton.vue';
 export default {
     name: 'FooterTop',
     data() {
         return { courses }
     },
-    components: { GreenButton }
+    components: { ColoredButton }
 }
 </script>
 
@@ -63,7 +63,7 @@ export default {
                     <!-- <figure>
                         <img src="../assets/img/footer-ad-grid-400x357.png" alt="grid">
                     </figure> -->
-                    <green-button label="book now"></green-button>
+                    <colored-button label="book now" class="green-button"></colored-button>
                 </div>
             </div>
         </div>
