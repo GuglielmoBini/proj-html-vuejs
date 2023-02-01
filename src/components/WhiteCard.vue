@@ -28,7 +28,7 @@ export default {
 }
 
 .highlighted {
-    padding: 30px;
+    padding: 40px 30px 30px 30px;
 }
 
 .shadowed {

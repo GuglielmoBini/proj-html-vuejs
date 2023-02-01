@@ -31,14 +31,14 @@ export default {
 
 // newsletter
 #newsletter {
-    margin: 100px 0;
+    margin-top: 100px;
     padding: 100px 0;
     background-image: url(../assets/img/newsletter_background.jpg);
     @include bg-image;
 
     p {
         color: $lightgrey;
-        padding-top: 20px;
+        padding-top: 30px;
     }
 }
 </style>
