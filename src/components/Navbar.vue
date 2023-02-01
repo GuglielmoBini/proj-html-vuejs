@@ -1,10 +1,12 @@
 <script>
 import { navLinks } from '../data';
+import GreenButton from './GreenButton.vue';
 export default {
     name: "Navbar",
     data() {
         return { navLinks }
-    }
+    },
+    components: { GreenButton }
 }
 </script>
 
@@ -20,12 +22,12 @@ export default {
                 <!-- nav links -->
                 <ul class="d-flex align-items-center h-100 m-0 p-0">
                     <li v-for="link in navLinks" :key="link.text">
-                        <a :href="link.url"
-                            :class="{ 'green-button': link.isButton, 'd-flex align-items-center': link.isNew }">
+                        <a :href="link.url" :class="{ 'd-flex align-items-center': link.isNew }">
                             <span>{{ link.text }}</span>
                             <span v-if="link.isNew" class="new-label">NEW</span>
                         </a>
                     </li>
+                    <li><green-button label="book now"></green-button></li>
                 </ul>
             </div>
         </div>

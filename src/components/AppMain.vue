@@ -1,7 +1,8 @@
 <script>
-
+import GreenButton from './GreenButton.vue';
 export default {
     name: 'AppMain',
+    components: { GreenButton }
 }
 </script>
 
@@ -25,7 +26,7 @@ export default {
                         <h3>First Lesson Free!</h3>
                         <p>When you make a block booking with us your first lesson is included free.</p>
                         <div class="my-5">FORM</div>
-                        <a class="green-button" href="#">request a callback</a>
+                        <green-button label="request a callback"></green-button>
                     </div>
                 </div>
             </div>
@@ -73,7 +74,15 @@ export default {
             </svg>
         </section>
         <!-- rating -->
-        <section id="rating"></section>
+        <section id="rating">
+            <div class="container">
+                <div class="row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 

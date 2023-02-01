@@ -17,17 +17,6 @@ a {
   }
 }
 
-.green-button {
-  border-radius: 25px;
-  background-color: $green;
-  border: 4px solid $green;
-  transition: background-color 0.5s;
-
-  &:hover {
-    background-color: $white;
-  }
-}
-
 .bg-red {
   background-color: rgba($color: red, $alpha: 0.3);
   border: 1px solid black;

@@ -6,43 +6,31 @@ const navLinks = [
     text: "home",
     url: "#",
     isNew: false,
-    isButton: false,
   },
   {
     text: "about",
     url: "#",
     isNew: false,
-    isButton: false,
   },
   {
     text: "prices",
     url: "#",
     isNew: false,
-    isButton: false,
   },
   {
     text: "courses",
     url: "#",
     isNew: true,
-    isButton: false,
   },
   {
     text: "locations",
     url: "#",
     isNew: false,
-    isButton: false,
   },
   {
     text: "blog",
     url: "#",
     isNew: false,
-    isButton: false,
-  },
-  {
-    text: "book now",
-    url: "#",
-    isNew: false,
-    isButton: true,
   },
 ];
 
