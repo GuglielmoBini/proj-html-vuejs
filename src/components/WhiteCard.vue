@@ -3,13 +3,13 @@ export default {
     name: 'WhiteCard',
     props: {
         isNew: Boolean,
-        shadow: String
+        class: String,
     }
 }
 </script>
 
 <template>
-    <div class="white-card" :class="shadow">
+    <div class="white-card" :class="class">
         <figure v-if="isNew">
             <img class="img-fluid" src="../assets/img/courses/new-corner.jpg" alt="new">
         </figure>
@@ -29,6 +29,10 @@ export default {
 
 .shadowed {
     box-shadow: 0 20px 30px 2px $lightgrey;
+}
+
+.bordered {
+    box-shadow: 0 -8px 0 0 $green, 0 20px 30px 2px $lightgrey;
 }
 
 figure {

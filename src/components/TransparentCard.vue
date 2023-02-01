@@ -16,12 +16,12 @@ export default {
     <div class="ts-card text-center">
         <img class="img-fluid" :src="img" :alt="course">
         <h4 class="my-4">{{ course }}</h4>
-        <colored-button :label="label" :Class="Class"></colored-button>
+        <colored-button :label="label" :class="Class"></colored-button>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .ts-card {
-    padding: 25px 0 25px 25px;
+    padding: 30px 0 30px 30px;
 }
 </style>

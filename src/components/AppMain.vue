@@ -3,11 +3,11 @@ import WhiteCard from './WhiteCard.vue';
 import TransparentCard from './TransparentCard.vue';
 import ColoredButton from './ColoredButton.vue';
 import LessonForm from './LessonForm.vue';
-import { carCourses, instructors, testimonials } from '../data';
+import { carCourses, ratings, instructors, testimonials } from '../data';
 export default {
     name: 'AppMain',
     data() {
-        return { carCourses, instructors, testimonials }
+        return { carCourses, ratings, instructors, testimonials }
     },
     components: { ColoredButton, LessonForm, WhiteCard, TransparentCard }
 }
@@ -31,7 +31,7 @@ export default {
                             nibh.</p>
                     </div>
                     <div class="col-5 text-center d-flex flex-column align-items-center form">
-                        <white-card shadow="shadowed">
+                        <white-card class="shadowed">
                             <h3>First Lesson Free!</h3>
                             <p class="my-5">When you make a block booking with us your first lesson is included free.
                             </p>
@@ -59,9 +59,9 @@ export default {
         <!-- courses -->
         <section id="courses">
             <div class="container h-100">
-                <div class="row justify-content-between h-100 pt-5">
+                <div class="row justify-content-between h-100 pt-2">
                     <div class="col-4 text-center course">
-                        <white-card shadow="shadowed" :isNew="true">
+                        <white-card class="shadowed" :isNew="true">
                             <h3 class="mb-5">Courses</h3>
                             <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices
                                 auctor sapien id
@@ -87,11 +87,17 @@ export default {
         </section>
         <!-- rating -->
         <section id="rating">
-            <div class="container">
-                <div class="row">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            <div class="container h-100">
+                <div class="row row-cols-3 h-100">
+                    <div v-for="rating in ratings"
+                        class="col d-flex justify-content-center align-items-start text-center">
+                        <white-card class="bordered">
+                            <div class="percentage d-flex align-items-center justify-content-center m-4">
+                                <h2>{{ rating.rate }}</h2>
+                            </div>
+                            <div class="mt-5 rate-type">{{ rating.type }}</div>
+                        </white-card>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,7 +163,7 @@ main {
 
         .course {
             position: relative;
-            bottom: 90px;
+            bottom: 60px;
         }
 
         p {
@@ -168,6 +174,31 @@ main {
         svg {
             position: relative;
             bottom: 0.3%;
+        }
+    }
+
+    #rating {
+        height: 500px;
+
+        .percentage,
+        .rate-type {
+            color: $lightgrey;
+        }
+
+        .percentage {
+            height: 230px;
+            width: 230px;
+            border-radius: 50%;
+            border: 8px solid $green;
+
+            h2 {
+                font-size: 4rem;
+
+            }
+        }
+
+        .rate-type {
+            font-weight: bold;
         }
     }
 }

@@ -51,6 +51,23 @@ const carCourses = [
   },
 ];
 
+// rating
+
+const ratings = [
+  {
+    rate: "95%",
+    type: "PASS RATE",
+  },
+  {
+    rate: "100%",
+    type: "REFERRAL RATE",
+  },
+  {
+    rate: "0%",
+    type: "ACCIDENT RATE",
+  },
+];
+
 // istruttori
 const instructors = [
   {
@@ -107,4 +124,4 @@ const courses = [
   "Instructor Training",
 ];
 
-export { navLinks, carCourses, instructors, testimonials, courses };
+export { navLinks, carCourses, ratings, instructors, testimonials, courses };
