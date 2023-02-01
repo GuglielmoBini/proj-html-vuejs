@@ -16,7 +16,5 @@ export default {
 </template>
 
 <style lang="scss">
-footer {
-    margin-top: 200px;
-}
+
 </style>

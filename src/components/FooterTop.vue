@@ -59,10 +59,10 @@ export default {
                     </ul>
                 </div>
                 <!-- col book -->
-                <div class="col px-5 d-flex align-items-start justify-content-center mt-5">
-                    <!-- <figure>
-                        <img src="../assets/img/footer-ad-grid-400x357.png" alt="grid">
-                    </figure> -->
+                <div class="col px-5 d-flex flex-column align-items-center">
+                    <figure class="mb-5">
+                        <img src="../assets/img/footer-ad-grid-200x178.png" alt="grid">
+                    </figure>
                     <colored-button label="book now" class="green-button"></colored-button>
                 </div>
             </div>
