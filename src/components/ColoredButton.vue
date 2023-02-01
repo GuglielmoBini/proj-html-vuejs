@@ -33,6 +33,5 @@ export default {
 .grey-button {
     color: $lightgrey;
     border: 4px solid $lightgrey;
-    background-color: $white;
 }
 </style>

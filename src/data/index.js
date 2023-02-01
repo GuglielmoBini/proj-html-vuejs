@@ -34,6 +34,23 @@ const navLinks = [
   },
 ];
 
+// corsi auto
+
+const carCourses = [
+  {
+    src: "./src/assets/img/courses/courses-passplus.jpg",
+    course: "Pass Plus",
+  },
+  {
+    src: "./src/assets/img/courses/course-intensive.jpg",
+    course: "Intensive Course",
+  },
+  {
+    src: "./src/assets/img/courses/courses-instructor.jpg",
+    course: "Instructors",
+  },
+];
+
 // istruttori
 const instructors = [
   {
@@ -90,4 +107,4 @@ const courses = [
   "Instructor Training",
 ];
 
-export { navLinks, instructors, testimonials, courses };
+export { navLinks, carCourses, instructors, testimonials, courses };

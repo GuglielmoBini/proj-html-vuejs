@@ -2,7 +2,7 @@
 export default {
     name: 'WhiteCard',
     props: {
-        isNew: String,
+        isNew: Boolean,
         shadow: String
     }
 }
@@ -10,6 +10,9 @@ export default {
 
 <template>
     <div class="white-card" :class="shadow">
+        <figure v-if="isNew">
+            <img class="img-fluid" src="../assets/img/courses/new-corner.jpg" alt="new">
+        </figure>
         <slot></slot>
     </div>
 </template>
@@ -19,11 +22,24 @@ export default {
 
 .white-card {
     background-color: $white;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 40px;
+    position: relative;
 }
 
 .shadowed {
     box-shadow: 0 20px 30px 2px $lightgrey;
+}
+
+figure {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+        border-radius: 15px 0 0 0;
+    }
 }
 </style>

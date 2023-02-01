@@ -1,10 +1,15 @@
 <script>
 import WhiteCard from './WhiteCard.vue';
+import TransparentCard from './TransparentCard.vue';
 import ColoredButton from './ColoredButton.vue';
 import LessonForm from './LessonForm.vue';
+import { carCourses, instructors, testimonials } from '../data';
 export default {
     name: 'AppMain',
-    components: { ColoredButton, LessonForm, WhiteCard }
+    data() {
+        return { carCourses, instructors, testimonials }
+    },
+    components: { ColoredButton, LessonForm, WhiteCard, TransparentCard }
 }
 </script>
 
@@ -45,8 +50,8 @@ export default {
                         <p>Give us a call to schedule your first driving lesson</p>
                     </div>
                     <div class="d-flex align-items-center justify-content-end">
-                        <span class="mx-3"><i class="fa-solid fa-phone-flip"></i></span>
-                        <span>1-800-555-555</span>
+                        <span><i class="fa-solid fa-phone-flip"></i></span>
+                        <span class="mx-4">1-800-555-555</span>
                     </div>
                 </div>
             </div>
@@ -54,20 +59,22 @@ export default {
         <!-- courses -->
         <section id="courses">
             <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-5 bg-red">
-                        COURSES CARD
+                <div class="row justify-content-between h-100 pt-5">
+                    <div class="col-4 text-center course">
+                        <white-card shadow="shadowed" :isNew="true">
+                            <h3 class="mb-5">Courses</h3>
+                            <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices
+                                auctor sapien id
+                                cursus. Aliquam maximus turpis in vehicula semper.</p>
+                            <colored-button label="course information" class="green-button"></colored-button>
+
+                        </white-card>
                     </div>
-                    <div class="col-7 bg-red">
+                    <div class="col-8">
                         <div class="row row-cols-3 h-100">
-                            <div class="col bg-red">
-                                COURSE PLAN
-                            </div>
-                            <div class="col bg-red">
-                                COURSE PLAN
-                            </div>
-                            <div class="col bg-red">
-                                COURSE PLAN
+                            <div v-for="carCourse in carCourses" class="col">
+                                <transparent-card :img="carCourse.src" :course="carCourse.course" label="learn more"
+                                    Class="grey-button"></transparent-card>
                             </div>
                         </div>
                     </div>
@@ -147,6 +154,16 @@ main {
         background-image: url(../assets/img/courses/promise-background.jpg);
         @include bg-image-bottom;
         position: relative;
+
+        .course {
+            position: relative;
+            bottom: 90px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $lightgrey;
+        }
 
         svg {
             position: relative;
