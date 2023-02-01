@@ -8,6 +8,7 @@ export default {
 </script>
 
 <template>
+    <!-- footer -->
     <footer>
         <footer-top></footer-top>
         <footer-bottom></footer-bottom>

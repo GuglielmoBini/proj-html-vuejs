@@ -1,14 +1,17 @@
 <script></script>
 
 <template>
-    <div id="footer-bottom">
+    <!-- footer bottom -->
+    <section id="footer-bottom">
         <div class="container h-100">
             <div class="d-flex align-items-center justify-content-between h-100">
+                <!-- copyright -->
                 <p class="m-0">© Copyright 2012 - 2020 | Avada Theme by <a href="#">ThemeFusion</a> | All Rights
                     Reserved |
                     Powered by
                     <a href="#">WordPress</a>
                 </p>
+                <!-- socials -->
                 <ul class="d-flex p-0 m-0">
                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -17,7 +20,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>

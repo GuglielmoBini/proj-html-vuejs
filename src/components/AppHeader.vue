@@ -7,13 +7,14 @@ export default {
 </script>
 
 <template>
+    <!-- header -->
     <header>
         <div class="banner">
             <div class="container h-100">
                 <div class="d-flex align-items-center justify-content-between h-100">
                     <div>We have a 95% Successful Pass Rate!</div>
                     <div>
-                        <span class="m-2"><i class="fa-solid fa-phone"></i></span>
+                        <span class="m-2"><i class="fa-solid fa-phone-flip"></i></span>
                         <span>Give us a call to book your tuition! 1-800-555-555</span>
                     </div>
                 </div>

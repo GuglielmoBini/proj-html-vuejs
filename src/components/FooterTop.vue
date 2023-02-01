@@ -9,9 +9,12 @@ export default {
 </script>
 
 <template>
-    <div id="footer-top">
+    <!-- footer top -->
+    <section id="footer-top">
         <div class="container h-100">
+            <!-- columns -->
             <div class="row row-cols-4 h-100">
+                <!-- col message -->
                 <div class="col px-5">
                     <figure>
                         <a href="#" class="p-0"><img src="../assets/img/logo/avada-drivers-logo-2x-300x58.png"
@@ -21,6 +24,7 @@ export default {
                         refresher
                         course, or the brand new driver wanting to pass first time.</p>
                 </div>
+                <!-- col details -->
                 <div class="col px-5 contacts">
                     <h4>CONTACT DETAILS</h4>
                     <ul class="p-0">
@@ -42,6 +46,7 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <!-- col courses -->
                 <div class="col px-5 courses">
                     <h4>COURSES</h4>
                     <ul class="p-0">
@@ -51,6 +56,7 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <!-- col book -->
                 <div class="col px-5 d-flex align-items-start justify-content-center mt-5">
                     <!-- <figure>
                         <img src="../assets/img/labels-200x44.png" alt="grid">
@@ -59,7 +65,7 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
