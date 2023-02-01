@@ -62,7 +62,7 @@ export default {
                 <div class="row justify-content-between h-100 pt-2">
                     <div class="col-4 text-center course">
                         <white-card class="shadowed" :isNew="true">
-                            <h3 class="mb-5">Courses</h3>
+                            <h2 class="mb-5">Courses</h2>
                             <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices
                                 auctor sapien id
                                 cursus. Aliquam maximus turpis in vehicula semper.</p>
@@ -96,6 +96,36 @@ export default {
                                 <h2>{{ rating.rate }}</h2>
                             </div>
                             <div class="mt-5 rate-type">{{ rating.type }}</div>
+                        </white-card>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- instructors -->
+        <section id="instructors">
+            <div class="container">
+                <div class="row instructors-title">
+                    <div class="col-8">
+                        <h2 class="my-5">Your Instructors</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor
+                            sapien id
+                            cursus. Aliquam maximus turpis in vehicula semper.</p>
+                    </div>
+                    <div class="col-4 align-self-center">
+                        <colored-button label="more about us" class="green-button w-100 text-center"></colored-button>
+                    </div>
+                </div>
+                <div class="row row-cols-3 mt-5 instructors-cards">
+                    <div v-for="instructor in instructors"
+                        class="col d-flex justify-content-center align-items-start text-center">
+                        <white-card class="bordered" :class="{ 'highlighted': instructor.highlighted }">
+                            <img :title="instructor.name" class="img-fluid" :src="instructor.src"
+                                :alt="instructor.name">
+                            <h3 class="my-4">{{ instructor.name }}</h3>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <p :class="{ 'mb-5': instructor.highlighted }">{{ instructor.text }}</p>
                         </white-card>
                     </div>
                 </div>
@@ -166,6 +196,10 @@ main {
             bottom: 60px;
         }
 
+        h2 {
+            font-size: 3rem;
+        }
+
         p {
             font-size: 1.2rem;
             color: $lightgrey;
@@ -177,6 +211,7 @@ main {
         }
     }
 
+    // rating
     #rating {
         height: 500px;
 
@@ -200,6 +235,40 @@ main {
         .rate-type {
             font-weight: bold;
         }
+    }
+
+    // instructors
+    #instructors {
+
+        .instructors-title {
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                color: $lightgrey;
+                font-size: 1.3rem;
+                padding-right: 150px;
+            }
+        }
+
+        .instructors-cards {
+
+            a {
+                color: $lightgrey;
+
+                &:hover {
+                    color: lightblue;
+                }
+            }
+
+            p {
+                color: $lightgrey;
+                font-size: 1.1rem;
+            }
+        }
+
     }
 }
 </style>

@@ -27,6 +27,10 @@ export default {
     position: relative;
 }
 
+.highlighted {
+    padding: 30px;
+}
+
 .shadowed {
     box-shadow: 0 20px 30px 2px $lightgrey;
 }

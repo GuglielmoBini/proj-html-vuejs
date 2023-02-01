@@ -74,16 +74,19 @@ const instructors = [
     name: "Mike Hart",
     src: "./src/assets/img/instructors/instructor-mikehart-600x381.jpg",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    highlighted: false,
   },
   {
     name: "John Smith",
     src: "./src/assets/img/instructors/instructor-johnsmith-600x381.jpg",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    highlighted: true,
   },
   {
     name: "Angela Hart",
     src: "./src/assets/img/instructors/instructor-angelahart-600x381.jpg",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    highlighted: false,
   },
 ];
 
