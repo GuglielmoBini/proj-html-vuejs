@@ -1,8 +1,10 @@
 <script>
-import GreenButton from './GreenButton.vue';
+import WhiteCard from './WhiteCard.vue';
+import ColoredButton from './ColoredButton.vue';
+import LessonForm from './LessonForm.vue';
 export default {
     name: 'AppMain',
-    components: { GreenButton }
+    components: { ColoredButton, LessonForm, WhiteCard }
 }
 </script>
 
@@ -11,10 +13,11 @@ export default {
         <!-- behind the wheel -->
         <section id="behind-the-wheel">
             <div class="container h-100">
-                <div class="row row-cols-2 justify-content-center align-items-center h-100">
-                    <div>
-                        <h2>Get Behind The Wheel</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id
+                <div class="row justify-content-between align-items-center h-100">
+                    <div class="col-6">
+                        <h2 class="mb-5">Get Behind The Wheel</h2>
+                        <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor
+                            sapien id
                             cursus. Aliquam maximus turpis in vehicula semper.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id
                             cursus. Aliquam maximus turpis in vehicula semper. Fusce et ultrices libero, at suscipit
@@ -22,11 +25,13 @@ export default {
                             turpis in vehicula semper. Fusce et ultrices libero, at suscipit lacus. Sed vitae fringilla
                             nibh.</p>
                     </div>
-                    <div class="text-center">
-                        <h3>First Lesson Free!</h3>
-                        <p>When you make a block booking with us your first lesson is included free.</p>
-                        <div class="my-5">FORM</div>
-                        <green-button label="request a callback"></green-button>
+                    <div class="col-5 text-center d-flex flex-column align-items-center form">
+                        <white-card shadow="shadowed">
+                            <h3>First Lesson Free!</h3>
+                            <p class="my-5">When you make a block booking with us your first lesson is included free.
+                            </p>
+                            <lesson-form></lesson-form>
+                        </white-card>
                     </div>
                 </div>
             </div>
@@ -96,6 +101,25 @@ main {
     // behind the wheel
     #behind-the-wheel {
         height: 600px;
+        position: relative;
+
+        .form {
+            position: relative;
+            bottom: 70px;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: $lightgrey;
+        }
+
+        h3 {
+            color: $green
+        }
     }
 
     // learging to drive
