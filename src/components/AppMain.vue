@@ -3,13 +3,14 @@ import WhiteCard from './WhiteCard.vue';
 import TransparentCard from './TransparentCard.vue';
 import ColoredButton from './ColoredButton.vue';
 import LessonForm from './LessonForm.vue';
+import Newsletter from './Newsletter.vue';
 import { carCourses, ratings, instructors, testimonials } from '../data';
 export default {
     name: 'AppMain',
     data() {
         return { carCourses, ratings, instructors, testimonials }
     },
-    components: { ColoredButton, LessonForm, WhiteCard, TransparentCard }
+    components: { ColoredButton, LessonForm, WhiteCard, TransparentCard, Newsletter }
 }
 </script>
 
@@ -72,7 +73,7 @@ export default {
                     </div>
                     <div class="col-8">
                         <div class="row row-cols-3 h-100">
-                            <div v-for="carCourse in carCourses" class="col">
+                            <div v-for="carCourse in carCourses" :key="carCourse.course" class="col">
                                 <transparent-card :img="carCourse.src" :course="carCourse.course" label="learn more"
                                     Class="grey-button"></transparent-card>
                             </div>
@@ -89,7 +90,7 @@ export default {
         <section id="rating">
             <div class="container h-100">
                 <div class="row row-cols-3 h-100">
-                    <div v-for="rating in ratings"
+                    <div v-for="rating in ratings" :key="rating.type"
                         class="col d-flex justify-content-center align-items-start text-center">
                         <white-card class="bordered">
                             <div class="percentage d-flex align-items-center justify-content-center m-4">
@@ -116,7 +117,7 @@ export default {
                     </div>
                 </div>
                 <div class="row row-cols-3 mt-5 instructors-cards">
-                    <div v-for="instructor in instructors"
+                    <div v-for="instructor in instructors" :key="instructor.name"
                         class="col d-flex justify-content-center align-items-start text-center">
                         <white-card class="bordered" :class="{ 'highlighted': instructor.highlighted }">
                             <img :title="instructor.name" class="img-fluid" :src="instructor.src"
@@ -131,6 +132,8 @@ export default {
                 </div>
             </div>
         </section>
+        <!-- newsletter -->
+        <newsletter></newsletter>
     </main>
 </template>
 
@@ -139,11 +142,9 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 
 main {
-    min-height: 600px;
 
     // behind the wheel
     #behind-the-wheel {
-        height: 600px;
         position: relative;
 
         .form {
@@ -213,7 +214,7 @@ main {
 
     // rating
     #rating {
-        height: 500px;
+        margin-bottom: 100px;
 
         .percentage,
         .rate-type {
@@ -221,8 +222,8 @@ main {
         }
 
         .percentage {
-            height: 230px;
-            width: 230px;
+            min-height: 230px;
+            min-width: 230px;
             border-radius: 50%;
             border: 8px solid $green;
 
@@ -255,16 +256,16 @@ main {
 
         .instructors-cards {
 
-            a {
+            a,
+            p {
                 color: $lightgrey;
+            }
 
-                &:hover {
-                    color: lightblue;
-                }
+            a:hover {
+                color: lightblue;
             }
 
             p {
-                color: $lightgrey;
                 font-size: 1.1rem;
             }
         }
