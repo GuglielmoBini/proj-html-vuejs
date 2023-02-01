@@ -45,7 +45,34 @@ export default {
                 </div>
             </div>
         </section>
-        <section id="courses"></section>
+        <!-- courses -->
+        <section id="courses">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-5 bg-red">
+                        COURSES CARD
+                    </div>
+                    <div class="col-7 bg-red">
+                        <div class="row row-cols-3 h-100">
+                            <div class="col bg-red">
+                                COURSE PLAN
+                            </div>
+                            <div class="col bg-red">
+                                COURSE PLAN
+                            </div>
+                            <div class="col bg-red">
+                                COURSE PLAN
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <svg class="fusion-big-triangle-candy" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
+                height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#e4eaed;padding:0;">
+                <path d="M-1 -1 L50 99 L101 -1 Z"></path>
+            </svg>
+        </section>
+        <!-- rating -->
         <section id="rating"></section>
     </main>
 </template>
@@ -57,10 +84,12 @@ export default {
 main {
     min-height: 600px;
 
+    // behind the wheel
     #behind-the-wheel {
         height: 600px;
     }
 
+    // learging to drive
     #learning {
         height: 300px;
         background-image: url(../assets/img/horizontal-cta-background.jpg);
@@ -76,6 +105,19 @@ main {
 
         span {
             font-size: 2.5rem;
+        }
+    }
+
+    // courses
+    #courses {
+        height: 500px;
+        background-image: url(../assets/img/courses/promise-background.jpg);
+        @include bg-image-bottom;
+        position: relative;
+
+        svg {
+            position: relative;
+            bottom: 0.3%;
         }
     }
 }

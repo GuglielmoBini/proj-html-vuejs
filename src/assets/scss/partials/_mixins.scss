@@ -4,3 +4,9 @@
   background-position: center;
   background-size: cover;
 }
+
+@mixin bg-image-bottom {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
