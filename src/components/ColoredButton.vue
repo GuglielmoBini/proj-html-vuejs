@@ -11,7 +11,7 @@ export default {
 
 <template>
     <a v-if="!inForm" :class="class" href="#">{{ label }}</a>
-    <button v-else :class="class" class="form-button" type="submit">{{ label }}</button>
+    <input v-else type="submit" :class="class" class="form-button" :value="label">
 </template>
 
 <style lang="scss" scoped>

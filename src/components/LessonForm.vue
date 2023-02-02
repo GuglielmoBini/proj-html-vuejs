@@ -9,10 +9,10 @@ export default {
 <template>
     <form>
         <div class="mb-4">
-            <input type="text" class="form-control" placeholder="Your Name*">
+            <input type="text" class="form-control" placeholder="Your Name*" required>
         </div>
         <div class="mb-4">
-            <input type="email" class="form-control" placeholder="Email*">
+            <input type="email" class="form-control" placeholder="Email*" required>
         </div>
         <div class="mb-4">
             <input type="text" class="form-control" placeholder="Phone">

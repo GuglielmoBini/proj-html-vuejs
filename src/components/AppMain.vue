@@ -157,7 +157,7 @@ export default {
                                     </figure>
                                     <h3>{{ news.title }}</h3>
                                     <div>
-                                        <span>{{ news.date }}</span>
+                                        <span class="date">{{ news.date }}</span>
                                         <span> | </span>
                                         <span class="comments">{{ news.comments }}</span>
                                     </div>
@@ -363,9 +363,13 @@ main {
                 color: $orange;
             }
 
+            .date,
+            p {
+                color: $lightgrey;
+            }
+
             p {
                 font-size: 1.1rem;
-                color: $lightgrey;
             }
         }
     }
