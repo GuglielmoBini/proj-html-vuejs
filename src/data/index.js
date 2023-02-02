@@ -6,31 +6,37 @@ const navLinks = [
     text: "home",
     url: "#",
     isNew: false,
+    current: true,
   },
   {
     text: "about",
     url: "#",
     isNew: false,
+    current: false,
   },
   {
     text: "prices",
     url: "#",
     isNew: false,
+    current: false,
   },
   {
     text: "courses",
     url: "#",
     isNew: true,
+    current: false,
   },
   {
     text: "locations",
     url: "#",
     isNew: false,
+    current: false,
   },
   {
     text: "blog",
     url: "#",
     isNew: false,
+    current: false,
   },
 ];
 

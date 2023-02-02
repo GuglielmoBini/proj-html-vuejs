@@ -22,7 +22,8 @@ export default {
                 <!-- nav links -->
                 <ul class="d-flex align-items-center h-100 m-0 p-0">
                     <li v-for="link in navLinks" :key="link.text">
-                        <a :href="link.url" :class="{ 'd-flex align-items-center': link.isNew }">
+                        <a :href="link.url"
+                            :class="{ 'd-flex align-items-center': link.isNew, 'active': link.current }">
                             <span>{{ link.text }}</span>
                             <span v-if="link.isNew" class="new-label">NEW</span>
                         </a>
@@ -48,6 +49,10 @@ nav {
         border-radius: 5px;
         margin-left: 5px;
         color: $white;
+    }
+
+    a.active {
+        color: $orange;
     }
 }
 </style>
