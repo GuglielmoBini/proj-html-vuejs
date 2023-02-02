@@ -91,29 +91,29 @@ const instructors = [
 ];
 
 // testimonials
-const testimonials = [
+const testimonialsInfo = [
   {
-    name: "Sophia",
+    name: "Sophia Jones",
     src: "./src/assets/img/testimonials/testimonial-sophia.png",
     text: "Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.",
   },
   {
-    name: "Kelly",
+    name: "Kelly Johnson",
     src: "./src/assets/img/testimonials/testimonial-kelly.png",
-    text: "Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, tempora soluta! Id dolores modi omnis! Delectus excepturi aut veritatis quibusdam voluptatem esse?",
   },
   {
-    name: "Kate",
+    name: "Kate Lewis",
     src: "./src/assets/img/testimonials/testimonial-kate.png",
     text: "Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.",
   },
   {
-    name: "Harold",
+    name: "Harold Green",
     src: "./src/assets/img/testimonials/testimonial-harold.png",
-    text: "Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, tempora soluta! Id dolores modi omnis! Delectus excepturi aut veritatis quibusdam voluptatem esse?",
   },
   {
-    name: "Grant",
+    name: "Grant Harvey",
     src: "./src/assets/img/testimonials/testimonial-grant.png",
     text: "Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.",
   },
@@ -127,4 +127,11 @@ const courses = [
   "Instructor Training",
 ];
 
-export { navLinks, carCourses, ratings, instructors, testimonials, courses };
+export {
+  navLinks,
+  carCourses,
+  ratings,
+  instructors,
+  testimonialsInfo,
+  courses,
+};

@@ -3,14 +3,15 @@ import WhiteCard from './WhiteCard.vue';
 import TransparentCard from './TransparentCard.vue';
 import ColoredButton from './ColoredButton.vue';
 import LessonForm from './LessonForm.vue';
+import Carousel from './Carousel.vue';
 import Newsletter from './Newsletter.vue';
-import { carCourses, ratings, instructors, testimonials } from '../data';
+import { carCourses, ratings, instructors, testimonialsInfo } from '../data';
 export default {
     name: 'AppMain',
     data() {
-        return { carCourses, ratings, instructors, testimonials }
+        return { carCourses, ratings, instructors, testimonialsInfo }
     },
-    components: { ColoredButton, LessonForm, WhiteCard, TransparentCard, Newsletter }
+    components: { ColoredButton, LessonForm, WhiteCard, TransparentCard, Carousel, Newsletter }
 }
 </script>
 
@@ -116,7 +117,7 @@ export default {
                         <colored-button label="more about us" class="green-button w-100 text-center"></colored-button>
                     </div>
                 </div>
-                <div class="row row-cols-3 mt-5 instructors-cards">
+                <div class="row row-cols-3 instructors-cards">
                     <div v-for="instructor in instructors" :key="instructor.name"
                         class="col d-flex justify-content-center align-items-start text-center">
                         <white-card class="bordered" :class="{ 'highlighted': instructor.highlighted }">
@@ -131,6 +132,12 @@ export default {
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- testimonials -->
+        <section id="testimonials" class="text-center">
+            <h2>Testimonials</h2>
+            <p>Here's what our happy drivers had to say about our services:</p>
+            <carousel :Options="testimonialsInfo"></carousel>
         </section>
         <!-- newsletter -->
         <newsletter></newsletter>
@@ -162,7 +169,7 @@ main {
         }
 
         h3 {
-            color: $green
+            color: $orange;
         }
     }
 
@@ -225,7 +232,7 @@ main {
             min-height: 230px;
             min-width: 230px;
             border-radius: 50%;
-            border: 8px solid $green;
+            border: 8px solid $orange;
 
             h2 {
                 font-size: 4rem;
@@ -240,6 +247,7 @@ main {
 
     // instructors
     #instructors {
+        position: relative;
 
         .instructors-title {
 
@@ -255,6 +263,8 @@ main {
         }
 
         .instructors-cards {
+            position: relative;
+            top: 100px;
 
             a,
             p {
@@ -270,6 +280,32 @@ main {
             }
         }
 
+    }
+
+    // testimonials
+    #testimonials {
+        background-image: url(../assets/img/testimonials/testimonial-background.jpg);
+        @include bg-image;
+        padding: 150px 0;
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h2,
+        h3 {
+            color: $darkgrey;
+        }
+
+        p,
+        i {
+            color: $lightgrey;
+        }
+
+        p {
+            font-size: 1.2rem;
+
+        }
     }
 }
 </style>
