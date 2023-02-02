@@ -286,6 +286,10 @@ main {
             position: relative;
             top: 100px;
 
+            h3 {
+                color: $darkgrey;
+            }
+
             a,
             p {
                 color: $lightgrey;

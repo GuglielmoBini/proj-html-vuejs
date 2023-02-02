@@ -1,6 +1,11 @@
 @use "../scss/partials/variables" as *;
 
 // css generico
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
 ul {
   list-style-type: none;
 }
