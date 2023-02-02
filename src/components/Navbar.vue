@@ -44,7 +44,7 @@ nav {
     .new-label {
         font-size: 0.7rem;
         padding: 3px;
-        background-color: $green;
+        background-color: $orange;
         border-radius: 5px;
         margin-left: 5px;
         color: $white;

@@ -36,7 +36,7 @@ export default {
 }
 
 .bordered {
-    box-shadow: 0 -8px 0 0 $green, 0 20px 30px 2px $lightgrey;
+    box-shadow: 0 -8px 0 0 $orange, 0 20px 30px 2px $lightgrey;
 }
 
 figure {

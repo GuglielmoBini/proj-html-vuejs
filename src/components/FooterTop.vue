@@ -96,10 +96,10 @@ export default {
 
     .courses li {
         margin-bottom: 20px;
-        color: $green;
+        color: $orange;
 
         a {
-            color: $green;
+            color: $orange;
             text-transform: capitalize;
             font-size: 1.1rem;
         }

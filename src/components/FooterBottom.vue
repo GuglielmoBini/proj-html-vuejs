@@ -37,7 +37,7 @@
     }
 
     a {
-        color: $green;
+        color: $orange;
         text-transform: capitalize;
         padding: 3px;
 
