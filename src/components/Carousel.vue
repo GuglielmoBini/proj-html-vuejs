@@ -12,7 +12,7 @@ export default {
         },
     },
     props: {
-        Options: Array,
+        options: Array,
     },
 };
 </script>
@@ -20,16 +20,16 @@ export default {
     <div class="container">
         <div class="carousel">
             <div class="gallery">
-                <figure v-for="(Option, i) in Options" v-show="i === currentIndex">
-                    <img :src="Option.src" :alt="Option.name" class="img-fluid">
+                <figure v-for="(option, i) in options" v-show="i === currentIndex">
+                    <img :src="option.src" :alt="option.name" class="img-fluid">
                     <figcaption>
-                        <p><i>{{ Option.text }}</i></p>
-                        <h3 class="my-5">{{ Option.name }}</h3>
+                        <p><i>{{ option.text }}</i></p>
+                        <h3 class="my-5">{{ option.name }}</h3>
                     </figcaption>
                 </figure>
             </div>
             <div class="dots">
-                <i v-for="(Option, i) in Options" :title="Option.name" @click="goToI(i)" class="fa-circle mx-1"
+                <i v-for="(option, i) in options" :title="option.name" @click="goToI(i)" class="fa-circle mx-1"
                     :class="i === currentIndex ? 'fa-solid' : 'fa-regular'"></i>
             </div>
         </div>
