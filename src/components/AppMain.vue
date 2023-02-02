@@ -5,11 +5,11 @@ import ColoredButton from './ColoredButton.vue';
 import LessonForm from './LessonForm.vue';
 import Carousel from './Carousel.vue';
 import Newsletter from './Newsletter.vue';
-import { carCourses, ratings, instructors, testimonialsInfo } from '../data';
+import { carCourses, ratings, instructors, testimonialsInfo, latestNews } from '../data';
 export default {
     name: 'AppMain',
     data() {
-        return { carCourses, ratings, instructors, testimonialsInfo }
+        return { carCourses, ratings, instructors, testimonialsInfo, latestNews }
     },
     components: { ColoredButton, LessonForm, WhiteCard, TransparentCard, Carousel, Newsletter }
 }
@@ -63,7 +63,7 @@ export default {
             <div class="container h-100">
                 <div class="row justify-content-between h-100 pt-2">
                     <div class="col-4 text-center course">
-                        <white-card class="shadowed" :isNew="true">
+                        <white-card class="shadowed" :isNew="true" newLabel="./src/assets/img/courses/new-corner.jpg">
                             <h2 class="mb-5">Courses</h2>
                             <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices
                                 auctor sapien id
@@ -75,8 +75,11 @@ export default {
                     <div class="col-8">
                         <div class="row row-cols-3 h-100">
                             <div v-for="carCourse in carCourses" :key="carCourse.course" class="col">
-                                <transparent-card :img="carCourse.src" :course="carCourse.course" label="learn more"
-                                    Class="grey-button"></transparent-card>
+                                <transparent-card>
+                                    <img class="img-fluid" :src="carCourse.src" :alt="carCourse.coursecourse">
+                                    <h4 class="my-4">{{ carCourse.course }}</h4>
+                                    <colored-button label="learn more" class="grey-button"></colored-button>
+                                </transparent-card>
                             </div>
                         </div>
                     </div>
@@ -121,7 +124,7 @@ export default {
                     <div v-for="instructor in instructors" :key="instructor.name"
                         class="col d-flex justify-content-center align-items-start text-center">
                         <white-card class="bordered" :class="{ 'highlighted': instructor.highlighted }">
-                            <img :title="instructor.name" class="img-fluid" :src="instructor.src"
+                            <img :title="'Instructor ' + instructor.name" class="img-fluid" :src="instructor.src"
                                 :alt="instructor.name">
                             <h3 class="my-4">{{ instructor.name }}</h3>
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -137,7 +140,35 @@ export default {
         <section id="testimonials" class="text-center">
             <h2>Testimonials</h2>
             <p>Here's what our happy drivers had to say about our services:</p>
-            <carousel :Options="testimonialsInfo"></carousel>
+            <carousel :options="testimonialsInfo"></carousel>
+        </section>
+        <!-- latest news -->
+        <section id="latest-news">
+            <div class="container text-center">
+                <div class="latest-news-card">
+                    <white-card class="bordered-news" :isLatestNews="true"
+                        latest="./src/assets/img/latest/latestnews-bottom-1200x105.png">
+                        <h2>Latest News</h2>
+                        <div class="row row-cols-2">
+                            <div v-for="news in latestNews" :key="news.title" class="col">
+                                <transparent-card>
+                                    <figure>
+                                        <img :src="news.src" :alt="news.title" :title="news.title" class="img-fluid">
+                                    </figure>
+                                    <h3>{{ news.title }}</h3>
+                                    <div>
+                                        <span>{{ news.date }}</span>
+                                        <span> | </span>
+                                        <span class="comments">{{ news.comments }}</span>
+                                    </div>
+                                    <p>{{ news.text }}</p>
+                                </transparent-card>
+                            </div>
+                        </div>
+                        <colored-button label="More from the blog" class="green-button"></colored-button>
+                    </white-card>
+                </div>
+            </div>
         </section>
         <!-- newsletter -->
         <newsletter></newsletter>
@@ -305,6 +336,35 @@ main {
         p {
             font-size: 1.2rem;
 
+        }
+    }
+
+    // latest news
+
+    #latest-news {
+        background-image: url(../assets/img/latest/latestnews-background.jpg);
+        @include bg-image;
+        position: relative;
+        padding-bottom: 150px;
+
+        .latest-news-card {
+            position: relative;
+            bottom: 50px;
+
+            h2 {
+                font-size: 3rem;
+                color: $darkgrey;
+            }
+
+            h3,
+            .comments {
+                color: $orange;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: $lightgrey;
+            }
         }
     }
 }

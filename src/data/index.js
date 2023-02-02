@@ -119,6 +119,23 @@ const testimonialsInfo = [
   },
 ];
 
+const latestNews = [
+  {
+    title: "What Car to Start With?",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+    date: "February 7th, 2019",
+    comments: "3 Comments",
+    src: "./src/assets/img/latest/blog-choosecar-700x441.jpg",
+  },
+  {
+    title: "Avada Driving School Expanding",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing",
+    date: "February 18th, 2019",
+    comments: "5 Comments",
+    src: "./src/assets/img/latest/blogpost-10and2-700x441.jpg",
+  },
+];
+
 // corsi footer
 const courses = [
   "Pass Plus",
@@ -133,5 +150,6 @@ export {
   ratings,
   instructors,
   testimonialsInfo,
+  latestNews,
   courses,
 };

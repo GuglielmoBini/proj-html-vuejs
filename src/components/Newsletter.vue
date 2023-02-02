@@ -31,7 +31,6 @@ export default {
 
 // newsletter
 #newsletter {
-    margin-top: 100px;
     padding: 100px 0;
     background-image: url(../assets/img/newsletter_background.jpg);
     @include bg-image;

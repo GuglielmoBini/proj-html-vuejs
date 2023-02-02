@@ -2,6 +2,9 @@
 export default {
     name: 'WhiteCard',
     props: {
+        latest: String,
+        isLatestNews: Boolean,
+        newLabel: String,
         isNew: Boolean,
         class: String,
     }
@@ -10,10 +13,13 @@ export default {
 
 <template>
     <div class="white-card" :class="class">
-        <figure v-if="isNew">
-            <img class="img-fluid" src="../assets/img/courses/new-corner.jpg" alt="new">
+        <figure v-if="isNew" class="new-label">
+            <img class="img-fluid" :src="newLabel" :alt="newLabel">
         </figure>
         <slot></slot>
+        <figure v-if="isLatestNews" class="triangle">
+            <img class="img-fluid w-100" :src="latest" :alt="latest">
+        </figure>
     </div>
 </template>
 
@@ -39,7 +45,12 @@ export default {
     box-shadow: 0 -8px 0 0 $orange, 0 20px 30px 2px $lightgrey;
 }
 
-figure {
+.bordered-news {
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 -8px 0 0 $navy, 0 20px 30px 2px $lightgrey;
+}
+
+.new-label {
     height: 80px;
     width: 80px;
     position: absolute;
@@ -49,5 +60,12 @@ figure {
     img {
         border-radius: 15px 0 0 0;
     }
+}
+
+.triangle {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
 }
 </style>
