@@ -16,7 +16,7 @@ export default {
                         <div class="mb-4">
                             <input type="email" class="form-control">
                         </div>
-                        <colored-button label="Subscribe" class="green-button w-100"></colored-button>
+                        <colored-button :inForm="true" label="Subscribe" class="green-button w-100"></colored-button>
                         <p>(We do not share your data with anybody, and only use it for its intended purpose)</p>
                     </form>
                 </div>

@@ -20,7 +20,7 @@ export default {
         <div class="mb-5">
             <input type="text" class="form-control" placeholder="Location">
         </div>
-        <colored-button label="request a callback" class="green-button"></colored-button>
+        <colored-button :inForm="true" label="request a callback" class="green-button"></colored-button>
     </form>
 </template>
 
