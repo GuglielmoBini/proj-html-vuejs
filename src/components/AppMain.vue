@@ -171,7 +171,9 @@ export default {
             </div>
         </section>
         <!-- newsletter -->
-        <newsletter></newsletter>
+        <section id="newsletter">
+            <newsletter></newsletter>
+        </section>
     </main>
 </template>
 
@@ -365,6 +367,19 @@ main {
                 font-size: 1.1rem;
                 color: $lightgrey;
             }
+        }
+    }
+
+    // newsletter
+
+    #newsletter {
+        padding: 100px 0;
+        background-image: url(../assets/img/newsletter_background.jpg);
+        @include bg-image;
+
+        p {
+            color: $lightgrey;
+            padding-top: 30px;
         }
     }
 }
