@@ -47,6 +47,10 @@ export default {
 
     .dots i {
         font-size: 0.8rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 </style>

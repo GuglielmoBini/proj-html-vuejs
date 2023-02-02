@@ -23,7 +23,3 @@ export default {
         <colored-button :inForm="true" label="request a callback" class="green-button"></colored-button>
     </form>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
