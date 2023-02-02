@@ -1,10 +1,10 @@
 <script>
-import { courses } from '../data';
+import { contacts, courses } from '../data';
 import ColoredButton from './ColoredButton.vue';
 export default {
     name: 'AppFooter',
     data() {
-        return { courses }
+        return { contacts, courses }
     },
     components: { ColoredButton }
 }
@@ -32,21 +32,9 @@ export default {
                     <div class="col px-5 contacts">
                         <h4>CONTACT DETAILS</h4>
                         <ul class="p-0">
-                            <li class="d-flex">
-                                <span><i class="fa-solid fa-house-chimney"></i></span>
-                                <span>12345 North Main Street, New York, NY 555555</span>
-                            </li>
-                            <li class="d-flex">
-                                <span><i class="fa-solid fa-phone"></i></span>
-                                <span>1.800.555.6789</span>
-                            </li>
-                            <li class="d-flex">
-                                <span><i class="fa-regular fa-envelope"></i></span>
-                                <span>info@your-domain.com</span>
-                            </li>
-                            <li class="d-flex">
-                                <span><i class="fa-solid fa-link"></i></span>
-                                <span>Theme-Fusion.com</span>
+                            <li v-for="contact in contacts" class="d-flex">
+                                <span v-html="contact.icon"></span>
+                                <span>{{ contact.text }}</span>
                             </li>
                         </ul>
                     </div>

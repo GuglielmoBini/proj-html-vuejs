@@ -136,6 +136,26 @@ const latestNews = [
   },
 ];
 
+// contatti footer
+const contacts = [
+  {
+    text: "12345 North Main Street, New York, NY 555555",
+    icon: '<i class="fa-solid fa-house-chimney"></i>',
+  },
+  {
+    text: "1.800.555.6789",
+    icon: '<i class="fa-solid fa-phone"></i>',
+  },
+  {
+    text: "info@your-domain.com",
+    icon: '<i class="fa-regular fa-envelope"></i>',
+  },
+  {
+    text: "Theme-Fusion.com",
+    icon: '<i class="fa-solid fa-link"></i>',
+  },
+];
+
 // corsi footer
 const courses = [
   "Pass Plus",
@@ -151,5 +171,6 @@ export {
   instructors,
   testimonialsInfo,
   latestNews,
+  contacts,
   courses,
 };
