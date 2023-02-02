@@ -182,6 +182,13 @@ export default {
 @use '../assets/scss/partials/variables' as *;
 
 main {
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        color: $orange;
+    }
 
     // behind the wheel
     #behind-the-wheel {
@@ -192,17 +199,9 @@ main {
             bottom: 70px;
         }
 
-        h2 {
-            font-size: 3rem;
-        }
-
         p {
             font-size: 1.1rem;
             color: $lightgrey;
-        }
-
-        h3 {
-            color: $orange;
         }
     }
 
@@ -211,10 +210,6 @@ main {
         height: 300px;
         background-image: url(../assets/img/horizontal-cta-background.jpg);
         @include bg-image;
-
-        h2 {
-            font-size: 3rem;
-        }
 
         p {
             font-size: 1.5rem;
@@ -235,10 +230,6 @@ main {
         .course {
             position: relative;
             bottom: 60px;
-        }
-
-        h2 {
-            font-size: 3rem;
         }
 
         p {
@@ -284,10 +275,6 @@ main {
 
         .instructors-title {
 
-            h2 {
-                font-size: 3rem;
-            }
-
             p {
                 color: $lightgrey;
                 font-size: 1.3rem;
@@ -321,10 +308,6 @@ main {
         @include bg-image;
         padding: 150px 0;
 
-        h2 {
-            font-size: 3rem;
-        }
-
         h2,
         h3 {
             color: $darkgrey;
@@ -354,11 +337,9 @@ main {
             bottom: 50px;
 
             h2 {
-                font-size: 3rem;
                 color: $darkgrey;
             }
 
-            h3,
             .comments {
                 color: $orange;
             }

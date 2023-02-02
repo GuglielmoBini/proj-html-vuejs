@@ -77,6 +77,7 @@ export default {
                     </ul>
                 </div>
             </div>
+            <a class="return-to-top" href="#"><i class="fa-solid fa-chevron-up fa-beat p-0"></i></a>
         </section>
     </footer>
 </template>
@@ -85,16 +86,28 @@ export default {
 @use '../assets/scss/partials/mixins' as *;
 @use '../assets/scss/partials/variables' as *;
 
+#footer-top,
+#footer-bottom {
+    color: $lightgrey;
+
+    a {
+        text-transform: capitalize;
+    }
+}
+
 #footer-top {
     padding-top: 50px;
     height: 450px;
     background-image: url(../assets/img/footer-background-color.jpg);
     @include bg-image;
-    color: $lightgrey;
+
+    h4,
+    .courses li {
+        margin-bottom: 20px;
+    }
 
     h4 {
         color: $white;
-        margin-bottom: 20px;
     }
 
     .contacts li {
@@ -106,12 +119,10 @@ export default {
     }
 
     .courses li {
-        margin-bottom: 20px;
         color: $orange;
 
         a {
             color: $orange;
-            text-transform: capitalize;
             font-size: 1.1rem;
         }
     }
@@ -120,7 +131,7 @@ export default {
 #footer-bottom {
     height: 120px;
     background-color: $darkergrey;
-    color: $lightgrey;
+    position: relative;
 
     p {
         font-size: 0.9rem;
@@ -128,7 +139,6 @@ export default {
 
     a {
         color: $orange;
-        text-transform: capitalize;
         padding: 3px;
 
     }
@@ -136,6 +146,14 @@ export default {
     i {
         color: $white;
         padding-left: 15px;
+    }
+
+    .return-to-top {
+        background-color: $darkergrey;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        right: 50px;
     }
 }
 </style>

@@ -13,7 +13,7 @@ export default {
                 <h2 class="mb-4">SIgn up to our newsletter</h2>
                 <form>
                     <div class="mb-4">
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" required>
                     </div>
                     <colored-button :inForm="true" label="Subscribe" class="green-button w-100"></colored-button>
                     <p>(We do not share your data with anybody, and only use it for its intended purpose)</p>
